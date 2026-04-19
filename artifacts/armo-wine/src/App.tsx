@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import bottleSingle from "@assets/Wine_Bottle_Photography_Apr_19_2026_1776640799392.png";
+import bottleThree from "@assets/Wine_Bottle_Photography_Apr_19_2026_(1)_1776640799386.png";
+import bottlePour from "@assets/Wine_Bottle_Photography_Apr_19_2026_(2)_1776640799392.png";
+import labelFlat from "@assets/Screenshot_2025-04-24_at_1.11.35_PM_1776640769477.png";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 40 },
@@ -70,7 +74,7 @@ function About() {
         >
           <h2 className="font-serif text-4xl md:text-6xl mb-10 text-foreground">Made without compromise.</h2>
           <p className="font-sans text-lg md:text-xl leading-relaxed text-foreground/80 font-light">
-            We didn't start with a market analysis. We started with a feeling. A memory of hands stained purple, of late nights, of something built from nothing. ARMO is small-batch by necessity, handcrafted by obsession. It is not for everyone. It is for those who know the difference.
+            I didn't start with a market analysis. I started with a feeling. A memory of hands stained purple, of late nights, of something built from nothing. ARMO is small-batch by necessity, handcrafted by obsession. It is not for everyone. It is for those who know the difference.
           </p>
         </motion.div>
       </div>
@@ -93,7 +97,7 @@ function Story() {
           <h2 className="font-serif text-4xl md:text-5xl mb-8 leading-snug">Roots in Armenia. <br/> Grown in California.</h2>
           <div className="w-12 h-px bg-secondary mb-8"></div>
           <p className="font-sans text-base leading-loose text-background/80 mb-6 font-light">
-            The ritual of winemaking in our family isn't a business; it's a lifeline to a place we left but never lost. In Glendale, beneath the shadow of different mountains, we crushed the grapes the only way we knew how—with patience, with reverence, and with a refusal to cut corners.
+            The ritual of winemaking isn't a business for me — it's a lifeline to a place I left but never lost. In Glendale, beneath the shadow of different mountains, I crushed the grapes the only way I knew how: with patience, with reverence, and with a refusal to cut corners.
           </p>
           <p className="font-sans text-base leading-loose text-background/80 font-light">
             Every bottle of ARMO is a quiet conversation between the soil of California and the soul of Armenia. No additives. No rushing the process. Just time, fruit, and gravity.
@@ -104,9 +108,9 @@ function Story() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="aspect-[3/4] bg-muted relative"
+          className="aspect-[3/4] bg-muted relative overflow-hidden"
         >
-           <img src="/images/bottle-dark.png" alt="ARMO Wine Bottle in the dark" className="object-cover w-full h-full grayscale-[20%] contrast-125" />
+          <img src={bottleSingle} alt="ARMO Wine Bottle" className="object-cover w-full h-full" />
         </motion.div>
       </div>
     </section>
@@ -149,18 +153,30 @@ function Specs() {
 function Gallery() {
   return (
     <section className="py-20 px-6 md:px-12 bg-background">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        className="max-w-5xl mx-auto mb-16 text-center"
+      >
+        <h3 className="font-sans text-xs tracking-[0.3em] uppercase text-muted-foreground">The Bottle</h3>
+      </motion.div>
       <motion.div 
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-end"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={staggerContainer}
       >
-        <motion.div variants={fadeIn} className="aspect-square md:aspect-[4/5] bg-muted relative overflow-hidden group">
-          <img src="/images/bottle-rustic.png" alt="ARMO poured glass" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
+        <motion.div variants={fadeIn} className="aspect-[3/4] bg-muted relative overflow-hidden group">
+          <img src={bottleThree} alt="Three ARMO wine bottles with grapes" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
         </motion.div>
-        <motion.div variants={fadeIn} className="aspect-square md:aspect-[4/5] bg-muted relative overflow-hidden md:mt-24 group">
-          <img src="/images/bottle-closeup.png" alt="ARMO bottle label closeup" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
+        <motion.div variants={fadeIn} className="aspect-[3/4] bg-muted relative overflow-hidden group md:-mt-16">
+          <img src={bottlePour} alt="ARMO wine being poured into a glass" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
+        </motion.div>
+        <motion.div variants={fadeIn} className="aspect-[2/3] bg-muted relative overflow-hidden group">
+          <img src={labelFlat} alt="ARMO wine label" className="object-cover object-top w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
         </motion.div>
       </motion.div>
     </section>
