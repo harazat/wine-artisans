@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "_ZS3z50WUR37EWT97xXMn"
+uri = "file://artifacts/armo-wine/public/images/bottle-dark.png"
+type = "image"
+title = "Single wine bottle dark background"
+
+[[generated]]
+id = "ojT38udtpjsjW1y-5F9Bp"
+uri = "file://artifacts/armo-wine/public/images/bottle-rustic.png"
+type = "image"
+title = "Wine bottle on rustic surface"
+
+[[generated]]
+id = "L_Cn0Yh6S8Pz6UnYOB2Iv"
+uri = "file://artifacts/armo-wine/public/images/bottle-closeup.png"
+type = "image"
+title = "Wine bottle label texture closeup"

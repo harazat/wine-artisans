@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Great+Vibes&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-script: var(--app-font-script);
+}
+
+:root {
+  /* Warm parchment */
+  --background: 40 33% 94%;
+  /* Dark charcoal for text */
+  --foreground: 0 2% 17%;
+  
+  /* Subtle borders */
+  --border: 40 15% 85%;
+  --input: 40 15% 85%;
+  --ring: 353 42% 32%;
+
+  /* Deep Burgundy / Crimson */
+  --primary: 353 42% 32%;
+  --primary-foreground: 40 33% 94%;
+
+  /* Subtle Gold */
+  --secondary: 40 47% 56%;
+  --secondary-foreground: 0 2% 17%;
+
+  --accent: 353 42% 32%;
+  --accent-foreground: 40 33% 94%;
+  
+  --muted: 40 20% 90%;
+  --muted-foreground: 0 2% 40%;
+
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Cormorant Garamond', serif;
+  --app-font-script: 'Great Vibes', cursive;
+  
+  --radius: 0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground selection:bg-primary selection:text-primary-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal tracking-tight;
+  }
+}
+
+.text-gold {
+  color: hsl(var(--secondary));
+}
+.border-gold {
+  border-color: hsl(var(--secondary));
+}
+.bg-burgundy {
+  background-color: hsl(var(--primary));
+}
+.text-burgundy {
+  color: hsl(var(--primary));
+}
+
+/* Hide scrollbar for clean look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary));
+}
