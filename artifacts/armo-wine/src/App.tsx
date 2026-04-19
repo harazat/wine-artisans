@@ -118,38 +118,6 @@ function Story() {
   );
 }
 
-function Heritage() {
-  return (
-    <section className="relative overflow-hidden h-[60vh] md:h-[70vh]">
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.06 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 2.5, ease: "easeOut" }}
-      >
-        <img
-          src="/images/gen-heritage.png"
-          alt="Armenian landscape at golden hour"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/50"></div>
-      </motion.div>
-      <motion.div
-        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <p className="font-sans text-xs tracking-[0.3em] uppercase text-background/60 mb-4">Batch No. 1</p>
-        <p className="font-script text-5xl md:text-7xl text-secondary">"This Is That's It."</p>
-        <p className="font-sans text-sm text-background/60 mt-6 tracking-widest uppercase">2024 — Glendale, California</p>
-      </motion.div>
-    </section>
-  );
-}
-
 function Specs() {
   return (
     <section className="py-32 px-6 md:px-12 bg-background">
@@ -197,26 +165,22 @@ function Gallery() {
       </motion.div>
 
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 items-end"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-end"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={staggerContainer}
       >
-        <motion.div variants={fadeIn} className="col-span-2 aspect-[4/3] bg-muted relative overflow-hidden group">
-          <img src={bottleThree} alt="Three ARMO wine bottles" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
+        <motion.div variants={fadeIn} className="aspect-[3/4] bg-muted relative overflow-hidden group">
+          <img src={bottleThree} alt="Three ARMO wine bottles with grapes" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
         </motion.div>
 
-        <motion.div variants={fadeIn} className="aspect-square bg-muted relative overflow-hidden group md:mt-16">
-          <img src="/images/gen-glass.png" alt="A glass of ARMO dry red wine" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
+        <motion.div variants={fadeIn} className="aspect-[3/4] bg-muted relative overflow-hidden group md:-mt-16">
+          <img src={bottlePour} alt="ARMO wine being poured into a glass" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
         </motion.div>
 
-        <motion.div variants={fadeIn} className="aspect-square bg-muted relative overflow-hidden group">
-          <img src="/images/gen-flatlay.png" alt="Artisan wine-making elements" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
-        </motion.div>
-
-        <motion.div variants={fadeIn} className="col-span-2 aspect-[4/3] bg-muted relative overflow-hidden group md:-mt-16">
-          <img src={bottlePour} alt="ARMO wine being poured" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
+        <motion.div variants={fadeIn} className="aspect-[3/4] bg-muted relative overflow-hidden group">
+          <img src={bottleSingle} alt="ARMO wine bottle" className="object-cover w-full h-full transition-transform duration-[2s] group-hover:scale-105" />
         </motion.div>
       </motion.div>
     </section>
@@ -263,7 +227,6 @@ function App() {
       <Hero />
       <About />
       <Story />
-      <Heritage />
       <Specs />
       <Gallery />
       <Journal />
