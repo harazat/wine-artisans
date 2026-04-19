@@ -18,3 +18,21 @@ id = "L_Cn0Yh6S8Pz6UnYOB2Iv"
 uri = "file://artifacts/armo-wine/public/images/bottle-closeup.png"
 type = "image"
 title = "Wine bottle label texture closeup"
+
+[[generated]]
+id = "1VaIlM9OHeyT5S7G5glbx"
+uri = "file://artifacts/armo-wine/public/images/gen-glass.png"
+type = "image"
+title = "armo wine glass candlelight"
+
+[[generated]]
+id = "s5Y_ITLfFCXaVEWjptv_Z"
+uri = "file://artifacts/armo-wine/public/images/gen-heritage.png"
+type = "image"
+title = "armenian heritage vineyard golden hour"
+
+[[generated]]
+id = "mWLg3nH6uC1kz7jUUkgGK"
+uri = "file://artifacts/armo-wine/public/images/gen-flatlay.png"
+type = "image"
+title = "armo wine artisan flatlay oak"
