@@ -2,13 +2,35 @@ import { motion } from "framer-motion";
 import bottleSingle from "@assets/Wine_Bottle_Photography_Apr_19_2026_1776640799392.png";
 import bottleThree from "@assets/Wine_Bottle_Photography_Apr_19_2026_(1)_1776640799386.png";
 import bottlePour from "@assets/Wine_Bottle_Photography_Apr_19_2026_(2)_1776640799392.png";
+import type { Variants } from "framer-motion";
 
-const fadeIn = {
+// const fadeIn = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] } }
+// };
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] } }
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      ease: [0.25, 0.1, 0.25, 1]
+    }
+  }
 };
 
-const staggerContainer = {
+// const staggerContainer = {
+//   hidden: { opacity: 0 },
+//   visible: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 0.3
+//     }
+//   }
+// };
+
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
